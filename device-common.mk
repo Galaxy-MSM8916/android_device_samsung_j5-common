@@ -10,7 +10,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, device/samsung/msm8916-common/msm8916.mk)
 
 # Inherit from vendor
-$(call inherit-product-if-exists, vendor/samsung/j5-common/j5-common-vendor.mk)
+$(call inherit-product, vendor/samsung/j5-common/j5-common-vendor.mk)
 
 DEVICE_PATH := device/samsung/j5-common
 
@@ -49,7 +49,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml
 
 # Proprieties
--include $(DEVICE_PATH)/system_prop.mk
+include $(DEVICE_PATH)/system_prop.mk
 
 # Ramdisk
 PRODUCT_PACKAGES += \
