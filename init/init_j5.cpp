@@ -31,71 +31,51 @@
 
 void init_target_properties(void)
 {
-	char *bootloader_str = NULL;
-	char *build_id = NULL;
 	char *device = NULL;
 	char *model = NULL;
-	char *name = NULL;
-	char *operator_alpha = NULL;
-	char *operator_numeric = NULL;
-	char *version_release = NULL;
-
-	int network_type = 1;
 
 	/* get the bootloader string */
 	std::string bootloader = android::base::GetProperty("ro.bootloader", "");
 
 	if (bootloader.find("J500FN") == 0) {
-		device = (char *)"j5nlte";
+		device = (char *)"j5nltexx";
 		model = (char *)"SM-J500FN";
-		name = (char *)"j5nltexx";
-		network_type=LTE_DEVICE;
+		set_lte_properties();
 	}
 	else if (bootloader.find("J500F") == 0) {
-		device = (char *)"j5lte";
+		device = (char *)"j5ltexx";
 		model = (char *)"SM-J500F";
-		name = (char *)"j5ltexx";
-		network_type=LTE_DEVICE;
+		set_lte_properties();
 	}
 	else if (bootloader.find("J500H") == 0) {
-		device = (char *)"j53g";
+		device = (char *)"j53gxx";
 		model = (char *)"SM-J500H";
-		name = (char *)"j53gxx";
-		network_type=GSM_DEVICE;
+		set_gsm_properties();
 	}
 	else if (bootloader.find("J500M") == 0) {
-		device = (char *)"j5lte";
+		device = (char *)"j5lteub";
 		model = (char *)"SM-J500M";
-		name = (char *)"j5lteub";
-		network_type=LTE_DEVICE;
+		set_lte_properties();
 	}
 	else if (bootloader.find("J500Y") == 0) {
 		device = (char *)"j5ylte";
 		model = (char *)"SM-J500Y";
-		name = (char *)"j5ltedo";
-		network_type=LTE_DEVICE;
+		set_lte_properties();
 	}
 	else if (bootloader.find("J500G") == 0) {
-		device = (char *)"j5lte";
+		device = (char *)"j5ltedx";
 		model = (char *)"SM-J500G";
-		name = (char *)"j5ltedx";
-		network_type=LTE_DEVICE;
+		set_lte_properties();
 	}
 	else if (bootloader.find("J5008") == 0) {
 		device = (char *)"j5ltechn";
 		model = (char *)"SM-J5008";
-		name = (char *)"j5ltezm";
-		network_type=LTE_DEVICE;
+		set_lte_properties();
 	}
 	else {
 		return;
 	}
 
-	/* make sure device name is set */
-	if (name == NULL)
-		name = device;
-
 	/* set the properties */
-	set_target_properties(build_id, bootloader_str, name, device, model,
-		       network_type, operator_alpha, operator_numeric, version_release);
+	set_target_properties(device, model);
 }
