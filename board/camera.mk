@@ -1,0 +1,1 @@
+BOARD_CAMERA_SENSORS := s5k5e3yx s5k3l2xx
