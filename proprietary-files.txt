@@ -28,7 +28,6 @@ vendor/lib/libQSEEComAPI.so:ea9511b3cb7a5aa6c90526a02d37733fb64e9c2bbf58f58e14d3
 
 # Camera
 etc/T13QL_s5k3l2xx_module_info.xml
-lib/hw/camera.msm8916.so:lib/hw/camera.vendor.msm8916.so
 lib/libaec_algo_front.so
 lib/libaec_algo_rear.so
 lib/libaf_algo_rear.so
