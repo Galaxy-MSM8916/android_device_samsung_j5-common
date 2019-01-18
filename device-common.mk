@@ -26,6 +26,7 @@ DEVICE_PATH := device/samsung/j5-common
 # Screen density
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
+TARGET_SCREEN_DENSITY := 320
 
 # Common overlay
 DEVICE_PACKAGE_OVERLAYS += \
