@@ -1,6 +1,6 @@
 # Camera
 PRODUCT_PACKAGES += \
-    Camera2
+    Snap
 
 # Permissions
 PRODUCT_COPY_FILES += \
