@@ -1,3 +1,7 @@
+# OpenGLES
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.opengles.version=196608
+
 # Radio
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 	persist.radio.apm_sim_not_pwdn=1 \
