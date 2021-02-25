@@ -61,10 +61,5 @@ PRODUCT_PACKAGES += \
     librilutils \
     rild
 
-# append the updater uri to the product properties if set
-ifneq ($(CM_UPDATER_OTA_URI),)
-    PRODUCT_PROPERTY_OVERRIDES += $(CM_UPDATER_OTA_URI)
-endif
-
 # Inhert dalvik heap values from aosp
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
