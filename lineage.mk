@@ -1,3 +1,9 @@
+#
+# Copyright (C) 2017-2021 The LineageOS Project
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
 # Release name
 PRODUCT_RELEASE_NAME := Samsung Galaxy J5
 
