@@ -23,8 +23,8 @@ vendor/lib/libqmiservices.so|639ad795ad821cef949dd7d780001d992a61d708
 vendor/lib/libqmi.so|e8d0ea6d7302e07d23dfb73a89b5818cebd054ef
 
 # QSEEcom - J500HXXU2BQC4_J500HOXE2BQC2_CAU
-bin/qseecomd:e901e0ca7ffa5888e4407ba8cbd209129d6dfa05c22c50db92f40e3ff035b0c0
-vendor/lib/libQSEEComAPI.so:ea9511b3cb7a5aa6c90526a02d37733fb64e9c2bbf58f58e14d32c625da7dc3e
+bin/qseecomd|da191cb3334f3a6c1f9d439755000bad0c998184
+vendor/lib/libQSEEComAPI.so|581c0c409d36b59633427198ceb223ebb39a1fa7
 
 # Camera
 etc/T13QL_s5k3l2xx_module_info.xml
