@@ -8,7 +8,7 @@
 
 set -e
 
-export DEVICE_COMMON=sdm660-common
+export DEVICE_COMMON=msm8916-common
 export DEVICE_SPECIFIED_COMMON_DEVICE="j5lte j5ltechn j5nlte j53gxx"
 
 "./../../${VENDOR}/${DEVICE_COMMON}/setup-makefiles.sh" "$@"
